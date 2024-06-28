@@ -1,0 +1,16 @@
+﻿<div class="div-container">
+    <NavLink href="@(endPointUrl)">
+        <span class="div-button">
+            @(content)
+        </span>
+    </NavLink>
+</div>
+
+
+@code {
+    [Parameter]
+    public string? content { get; set; }
+
+    [Parameter]
+    public string endPointUrl { get; set; } = "/";
+}

@@ -1,0 +1,28 @@
+﻿@page "/UpdateTask/taskid={id:int}"
+
+@inject TodoService client
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<div>
+    <h3>Atualizar Tarefa: @(task.TaskTitle)</h3>
+</div>
+ 
+<div>
+    <form>
+        <label>
+            Atualizar Nome do Responsável: @(task.NameOfResponsible)
+            <br />
+            <InputText autocomplete="off" class="wd-input pdh-1" @bind-Value="NewNameOfResponsible"></InputText>
+        </label>
+        <br />
+        <label>
+            Atualizar Título da Tarefa: @(task.TaskTitle)
+            <br />
+            <InputText autocomplete="off" class="wd-input pdh-1 " @bind-Value="NewTaskTittle"></InputText>
+        </label>
+
+        <br />
+        <button @onclick="ClickToUpdate" type="submit">Atualizar</button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+﻿@page "/UpdateTask"
+@rendermode InteractiveServer
+@inject TodoService TodoService
+@inject NavigationManager Nav
+
+<div>
+    @if (tasks is not null)
+    { 
+        @foreach (var task in tasks)
+        {
+            <div @onclick="() => ClickToUpdadate(task.IdTask)" class="cardTask">
+                <h3>@(task.TaskTitle)</h3> 
+                <h4>@(task.NameOfResponsible)</h4>
+            </div>
+        }       
+    }
+</div>
+
+@code {
+    public List<TodoItem>? tasks;
+
+    private void ClickToUpdadate(int id)
+    {
+        Nav.NavigateTo($"/UpdateTask/taskid={id}");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        tasks = await TodoService.GetTodosAsync();
+    }
+}

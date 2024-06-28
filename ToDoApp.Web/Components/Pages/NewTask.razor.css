@@ -1,0 +1,10 @@
+﻿div {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 3rem;
+
+    transform: scale(1.3);
+}

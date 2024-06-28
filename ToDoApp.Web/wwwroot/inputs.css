@@ -1,0 +1,15 @@
+﻿.wd-input {
+    width: 300px;
+}
+
+.no-resize {
+    resize: none;
+}
+
+.pd-1 {
+    padding: 5px;
+}
+
+.pdh-1 {
+    padding-inline: 5PX;
+}

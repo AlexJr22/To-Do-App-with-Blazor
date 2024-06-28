@@ -1,0 +1,36 @@
+﻿@page "/newtask"
+@rendermode InteractiveServer
+@inject TodoService TodoService
+
+<PageTitle>Nova Tarefa</PageTitle>
+
+<div>
+    <h3>Adicionar Nova Tarefa</h3>
+</div>
+
+<div>
+    <form>
+        <label>
+            Responsável:
+            <br />
+            <InputText required autocomplete="off" class="wd-input pdh-1" @bind-Value="@(NameResponsible)" />
+        </label>
+
+        <br />
+        <label>
+            Titulo da Tarefa:
+            <br />
+            <InputText required autocomplete="off" class="wd-input pdh-1" @bind-Value="@(TaskTitle)" />
+        </label>
+
+        <br />
+        <label>
+            Descrição da Tarefa:
+            <br />
+            <InputTextArea class="no-resize wd-input pd-1" @bind-Value="@(Description)" />
+        </label>
+
+        <br />
+        <button @onclick="CreateNewTask" type="submit">Adicionar</button>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+﻿@page "/TasksCompleteds"
+@using ToDoApp.Web.Components.TaskCardComponents.TaskCompleteds
+@inject TodoService TodoService
+@attribute [StreamRendering]
+
+<div>
+    <h3>Tarefas Completas</h3>
+    <br />
+
+    @if (todos is null)
+    {
+        <span>Carregando ...</span>
+    }
+    else
+    {
+        @foreach (var todo in todos)
+        {
+            <TaskCardCompleted Todo="@todo" />
+        }
+    }
+</div>

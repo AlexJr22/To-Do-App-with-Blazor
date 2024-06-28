@@ -1,0 +1,22 @@
+﻿
+nav {
+    background-color: #2f195f;
+    height: 100vh;
+    width: 310px;
+}
+
+.logo-nav {
+    background-color: #0f1020;
+    height: 5rem;
+
+    align-content: center;
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+    .logo-nav h2 {
+        color: #fff;
+        text-decoration-color: #b6ff00;
+        font-weight: 400;
+    }
