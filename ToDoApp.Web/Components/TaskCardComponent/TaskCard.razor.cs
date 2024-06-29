@@ -2,15 +2,19 @@
 using ToDoApp.Web.Model;
 using ToDoApp.Web.Services;
 
-namespace ToDoApp.Web.Components.TaskCardComponents
+namespace ToDoApp.Web.Components.TaskCardComponent
 {
     public partial class TaskCard
     {
         [Parameter]
         public TodoItem? Todo { get; set; }
+        [Parameter]
+        public bool DisableDisplayOnUnCheck { get; set; } = false;
 
         private string CurrentClassInput = "div-input-notChecked";
         private string CurrentDisplay = "display-flex";
+        
+
 
         private void ChangeClassInput()
         {
@@ -30,8 +34,17 @@ namespace ToDoApp.Web.Components.TaskCardComponents
                     CurrentClassInput = "div-input-Checked";
         }
 
+        private void DisableDisplay()
+        {
+            if (DisableDisplayOnUnCheck)
+            {
+                CurrentDisplay = "display-none";
+            }
+        }
+
         private async void OnClickInput()
         {
+            DisableDisplay();
             ChangeClassInput();
             await UpdateStatus();
         }

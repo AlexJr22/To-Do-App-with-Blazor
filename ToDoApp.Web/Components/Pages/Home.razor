@@ -1,5 +1,5 @@
 ﻿@page "/"
-@using ToDoApp.Web.Components.TaskCardComponents
+@using ToDoApp.Web.Components.TaskCardComponent
 @inject TodoService TodoService
 @attribute [StreamRendering]
 
@@ -15,7 +15,7 @@
     {
         @foreach (var todo in todos)
         {
-            <TaskCard Todo="@todo" />
+           <TaskCard Todo="todo"/>
         }
     }
 </div>
