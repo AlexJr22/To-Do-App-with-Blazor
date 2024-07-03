@@ -40,6 +40,11 @@
     margin-left: 1rem;
 }
 
+.div-content-center {
+    width: 100%;
+    text-align: center;
+}
+
 .btn-delete {
     height: 1.7rem;
     width: 1.7rem;

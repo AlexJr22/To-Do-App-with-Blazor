@@ -1,18 +1,21 @@
 ﻿@page "/UpdateTask"
+@using ToDoApp.Web.Components.TaskCardComponent
 @rendermode InteractiveServer
 @inject TodoService TodoService
 @inject NavigationManager Nav
 
 <div>
     @if (tasks is not null)
-    { 
+    {
         @foreach (var task in tasks)
         {
-            <div @onclick="() => ClickToUpdadate(task.IdTask)" class="cardTask">
-                <h3>@(task.TaskTitle)</h3> 
-                <h4>@(task.NameOfResponsible)</h4>
+            <div onclick="@(() => ClickToUpdadate(task.IdTask))" style="width: 100%;">
+                <TaskCard DisableDeleteBtn="true"
+                          DisableInputCheck="true"
+                          Todo="task"
+                          CssClass="cursor-pointer" />
             </div>
-        }       
+        }
     }
 </div>
 

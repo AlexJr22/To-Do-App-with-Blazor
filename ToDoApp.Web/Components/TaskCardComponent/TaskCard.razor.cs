@@ -10,7 +10,12 @@ namespace ToDoApp.Web.Components.TaskCardComponent
         public TodoItem? Todo { get; set; }
         [Parameter]
         public bool DisableDisplayOnUnCheck { get; set; } = false;
-
+        [Parameter]
+        public bool DisableDeleteBtn { get; set; } = false;
+        [Parameter]
+        public string? CssClass { get; set; }
+        [Parameter]
+        public bool DisableInputCheck { get; set; } = false;
         private string CurrentClassInput = "div-input-notChecked";
         private string CurrentDisplay = "display-flex";
         

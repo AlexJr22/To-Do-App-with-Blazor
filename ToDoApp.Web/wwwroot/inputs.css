@@ -13,3 +13,11 @@
 .pdh-1 {
     padding-inline: 5PX;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.display-flex {
+    display: flex;
+}
